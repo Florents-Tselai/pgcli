@@ -10,6 +10,7 @@ on:
   push:
     branches:
       - "main"
+      - "rename-sqail"
     paths:
       - "sqail/website/**"
       - ".github/workflows/pages.yml"
