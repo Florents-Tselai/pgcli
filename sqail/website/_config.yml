@@ -32,17 +32,17 @@ aux_links:
   "GitHub":
     - "https://github.com/Florents-Tselai/sqail"
   "Discord":
-    - "https://discord.gg/Tv2uQnR88V"
+    - "https://discord.gg/XXXXXX"
   "Blog":
     - "/blog/"
 
 nav_external_links:
   - title: "GitHub"
-    url: "https://github.com/Aider-AI/aider"
+    url: "https://github.com/Florents-Tselai/sqail"
   - title: "Discord"
-    url: "https://discord.gg/Tv2uQnR88V"
+    url: "https://discord.gg/XXXXXX"
 
-repository: Aider-AI/aider
+repository: Florents-Tselai/sqail
 
 callouts:
   tip:
