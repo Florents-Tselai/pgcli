@@ -46,7 +46,7 @@ dynamic = ["version"]
 
 
 [project.scripts]
-pgcli = "pgcli.main:cli"
+sqail = "sqail.main:cli"
 
 [project.optional-dependencies]
 keyring = ["keyring >= 12.2.0"]
@@ -66,8 +66,8 @@ version = { attr = "sqail.__version__" }
 find = { namespaces = false }
 
 [tool.setuptools.package-data]
-pgcli = [
-    "pgclirc",
+sqail = [
+    "sqailr",
     "packages/pgliterals/pgliterals.json",
 ]
 
