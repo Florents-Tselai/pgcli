@@ -15,8 +15,8 @@ on:
       - "sqail/website/**"
       - ".github/workflows/pages.yml"
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch: true
+#  # Allows you to run this workflow manually from the Actions tab
+#  workflow_dispatch: true
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
