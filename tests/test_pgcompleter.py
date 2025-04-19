@@ -1,6 +1,6 @@
 import json
 import pytest
-from pgcli import pgcompleter
+from sqail import pgcompleter
 import tempfile
 
 

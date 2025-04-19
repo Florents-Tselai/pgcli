@@ -1,6 +1,6 @@
 from functools import partial
 from itertools import product
-from pgcli.packages.parseutils.meta import FunctionMetadata, ForeignKey
+from sqail.packages.parseutils.meta import FunctionMetadata, ForeignKey
 from prompt_toolkit.completion import Completion
 from prompt_toolkit.document import Document
 from unittest.mock import Mock
@@ -202,7 +202,7 @@ class MetaData:
 
     def get_completer(self, settings=None, casing=None):
         metadata = self.metadata
-        from pgcli.pgcompleter import PGCompleter
+        from sqail.pgcompleter import PGCompleter
         from pgspecial import PGSpecial
 
         comp = PGCompleter(

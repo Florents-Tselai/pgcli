@@ -4,7 +4,7 @@ import stat
 
 import pytest
 
-from pgcli.config import ensure_dir_exists, skip_initial_comment
+from sqail.config import ensure_dir_exists, skip_initial_comment
 
 
 def test_ensure_file_parent(tmpdir):

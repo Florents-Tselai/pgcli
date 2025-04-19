@@ -1,6 +1,6 @@
 # coding=utf-8
 
-from pgcli.packages.parseutils.tables import extract_tables
+from sqail.packages.parseutils.tables import extract_tables
 
 
 supported_formats = (

@@ -73,3 +73,5 @@ venv/
 
 .ropeproject/
 
+pgdata/
+Makefile

@@ -2,8 +2,8 @@ from unittest.mock import patch
 
 from click.testing import CliRunner
 
-from pgcli.main import cli
-from pgcli.pgexecute import PGExecute
+from sqail.main import cli
+from sqail.pgexecute import PGExecute
 
 
 def test_application_name_in_env():

@@ -1,6 +1,6 @@
 import pytest
 import psycopg
-from pgcli.main import format_output, OutputSettings
+from sqail.main import format_output, OutputSettings
 from os import getenv
 
 POSTGRES_USER = getenv("PGUSER", "postgres")

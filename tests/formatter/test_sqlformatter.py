@@ -1,9 +1,9 @@
 # coding=utf-8
 
-from pgcli.packages.formatter.sqlformatter import escape_for_sql_statement
+from sqail.packages.formatter.sqlformatter import escape_for_sql_statement
 
 from cli_helpers.tabular_output import TabularOutputFormatter
-from pgcli.packages.formatter.sqlformatter import adapter, register_new_formatter
+from sqail.packages.formatter.sqlformatter import adapter, register_new_formatter
 
 
 def test_escape_for_sql_statement_bytes():

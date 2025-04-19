@@ -1,4 +1,4 @@
-from pgcli.pyev import Visualizer
+from sqail.pyev import Visualizer
 import json
 
 

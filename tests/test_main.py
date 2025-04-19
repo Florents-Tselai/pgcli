@@ -12,7 +12,7 @@ try:
 except ImportError:
     setproctitle = None
 
-from pgcli.main import (
+from sqail.main import (
     obfuscate_process_password,
     duration_in_words,
     format_output,
@@ -21,7 +21,7 @@ from pgcli.main import (
     OutputSettings,
     COLOR_CODE_REGEX,
 )
-from pgcli.pgexecute import PGExecute
+from sqail.pgexecute import PGExecute
 from pgspecial.main import PAGER_OFF, PAGER_LONG_OUTPUT, PAGER_ALWAYS
 from utils import dbtest, run
 from collections import namedtuple

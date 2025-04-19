@@ -6,8 +6,8 @@ from configobj import ConfigObj
 from click.testing import CliRunner
 from sshtunnel import SSHTunnelForwarder
 
-from pgcli.main import cli, notify_callback, PGCli
-from pgcli.pgexecute import PGExecute
+from sqail.main import cli, notify_callback, PGCli
+from sqail.pgexecute import PGExecute
 
 
 @pytest.fixture

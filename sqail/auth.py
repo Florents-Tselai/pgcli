@@ -51,7 +51,7 @@ def keyring_get_password(key):
 
 def keyring_set_password(key, passwd):
     try:
-        keyring.set_password("pgcli", key, passwd)
+        keyring.set_password("sqail", key, passwd)
     except Exception as e:
         click.secho(
             keyring_error_message.format("Set password in keyring returned:", str(e)),

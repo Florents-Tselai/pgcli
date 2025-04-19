@@ -1,4 +1,4 @@
-from pgcli.packages.sqlcompletion import (
+from sqail.packages.sqlcompletion import (
     suggest_type,
     Special,
     Database,
@@ -14,7 +14,7 @@ from pgcli.packages.sqlcompletion import (
     JoinCondition,
     Join,
 )
-from pgcli.packages.parseutils.tables import TableReference
+from sqail.packages.parseutils.tables import TableReference
 import pytest
 
 

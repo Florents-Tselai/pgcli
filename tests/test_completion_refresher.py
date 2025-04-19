@@ -5,7 +5,7 @@ from unittest.mock import Mock, patch
 
 @pytest.fixture
 def refresher():
-    from pgcli.completion_refresher import CompletionRefresher
+    from sqail.completion_refresher import CompletionRefresher
 
     return CompletionRefresher()
 

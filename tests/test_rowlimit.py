@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import Mock
 
-from pgcli.main import PGCli
+from sqail.main import PGCli
 
 
 # We need this fixtures because we need PGCli object to be created

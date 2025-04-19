@@ -55,7 +55,7 @@ def get_config_filename(pgclirc_file=None):
 
 
 def get_config(pgclirc_file=None):
-    from pgcli import __file__ as package_root
+    from sqail import __file__ as package_root
 
     package_root = os.path.dirname(package_root)
 

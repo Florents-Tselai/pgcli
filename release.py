@@ -98,7 +98,7 @@ if __name__ == "__main__":
     # ]
     # checklist(checks)
 
-    ver = version("pgcli/__init__.py")
+    ver = version("sqail/__init__.py")
     print("Releasing Version:", ver)
 
     parser = OptionParser()
@@ -128,7 +128,7 @@ if __name__ == "__main__":
     if not click.confirm("Are you sure?", default=False):
         sys.exit(1)
 
-    commit_for_release("pgcli/__init__.py", ver)
+    commit_for_release("sqail/__init__.py", ver)
     create_git_tag("v{}".format(ver))
     create_distribution_files()
     push_to_github()

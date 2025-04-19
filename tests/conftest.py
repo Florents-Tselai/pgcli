@@ -9,8 +9,8 @@ from utils import (
     db_connection,
     drop_tables,
 )
-import pgcli.main
-import pgcli.pgexecute
+import sqail.main
+import sqail.pgexecute
 
 
 @pytest.fixture(scope="function")
@@ -31,14 +31,14 @@ def cursor(connection):
 
 @pytest.fixture
 def executor(connection):
-    return pgcli.pgexecute.PGExecute(
+    return sqail.pgexecute.PGExecute(
         database="_test_db",
         user=POSTGRES_USER,
         host=POSTGRES_HOST,
         password=POSTGRES_PASSWORD,
         port=POSTGRES_PORT,
         dsn=None,
-        notify_callback=pgcli.main.notify_callback,
+        notify_callback=sqail.main.notify_callback,
     )
 
 

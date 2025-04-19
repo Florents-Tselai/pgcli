@@ -73,4 +73,4 @@ _pgcli()
             _pg_databases
     esac
 } &&
-complete -F _pgcli pgcli
+complete -F _pgcli sqail

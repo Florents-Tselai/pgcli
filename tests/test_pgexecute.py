@@ -7,8 +7,8 @@ from unittest.mock import patch, MagicMock
 from pgspecial.main import PGSpecial, NO_QUERY
 from utils import run, dbtest, requires_json, requires_jsonb
 
-from pgcli.main import PGCli, exception_formatter as main_exception_formatter
-from pgcli.packages.parseutils.meta import FunctionMetadata
+from sqail.main import PGCli, exception_formatter as main_exception_formatter
+from sqail.packages.parseutils.meta import FunctionMetadata
 
 
 def function_meta_data(

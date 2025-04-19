@@ -1,6 +1,6 @@
 [project]
-name = "pgcli"
-authors = [{ name = "Pgcli Core Team", email = "pgcli-dev@googlegroups.com" }]
+name = "sqail"
+authors = [{ name = "Florents Tselai", email = "florents.tselai@gmail.com" }]
 license = { text = "BSD" }
 description = "CLI for Postgres Database. With auto-completion and syntax highlighting."
 readme = "README.rst"
@@ -60,7 +60,7 @@ build-backend = "setuptools.build_meta"
 include-package-data = false
 
 [tool.setuptools.dynamic]
-version = { attr = "pgcli.__version__" }
+version = { attr = "sqail.__version__" }
 
 [tool.setuptools.packages]
 find = { namespaces = false }
