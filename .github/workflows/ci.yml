@@ -11,10 +11,11 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        pgversion: ["16", "17.0", "17.4"]
 
     services:
       postgres:
-        image: postgres:9.6
+        image: postgres:${{ matrix.pgversion }}
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
