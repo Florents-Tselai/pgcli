@@ -1,6 +1,6 @@
 name: Test
 
-on: [ push, pull_request ]
+on: [push, pull_request]
 
 permissions:
     contents: read
@@ -10,27 +10,25 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                python-version: [ "3.7", "3.8", "3.9", "3.10", "3.11" ]
-                pgver: [ "16", "17" ]
+                python-version: ["3.9", "3.10", "3.11"]
+                pgver: ["16", "17"]
 
         steps:
-            -   uses: actions/checkout@v3
+            - uses: actions/checkout@v3
 
-            -   name: Set up Python ${{ matrix.python-version }}
-                uses: actions/setup-python@v4
-                with:
-                    python-version: ${{ matrix.python-version }}
-                    cache: pip
-                    cache-dependency-path: setup.py
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: ${{ matrix.python-version }}
+                  cache: pip
+                  cache-dependency-path: |
+                      setup.py
+                      requirements-dev.txt
 
-            -   name: 'Install dependencies'
-                run: |
-                    pip install -e '.[test]'
+            - name: Install project and development dependencies
+              run: |
+                  pip install -e '.[test]'
+                  pip install -r requirements-dev.txt
 
-            -   name: 'Install requirements-dev.txt'
-                run: |
-                    pip install -r requirements-dev.txt
-
-            -   name: 'Run Python tests'
-                run: |
-                    pytest
+            - name: Run tests
+              run: pytest
