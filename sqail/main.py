@@ -971,7 +971,7 @@ class PGCli:
         if not self.less_chatty:
             print("Server: PostgreSQL", self.pgexecute.server_version)
             print("Version:", __version__)
-            print("Home: http://pgcli.com")
+            print("Home: http://github.com/Florents-Tselai/sqail")
 
         try:
             while True:

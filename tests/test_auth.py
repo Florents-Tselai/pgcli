@@ -33,8 +33,8 @@ def test_keyring_set_password_ok():
 
 
 def test_keyring_set_password_exception():
-    with mock.patch("pgcli.auth.keyring", return_value=mock.MagicMock()):
+    with mock.patch("sqail.auth.keyring", return_value=mock.MagicMock()):
         with mock.patch(
-            "pgcli.auth.keyring.set_password", side_effect=Exception("Boom!")
+            "sqail.auth.keyring.set_password", side_effect=Exception("Boom!")
         ):
             auth.keyring_set_password("test", "abc123")

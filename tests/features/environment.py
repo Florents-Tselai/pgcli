@@ -63,7 +63,7 @@ def before_all(context):
                         "import coverage",
                         "coverage.process_startup()",
                         "import pgcli.main",
-                        "pgcli.main.cli(auto_envvar_prefix='BEHAVE')",
+                        "sqail.main.cli(auto_envvar_prefix='BEHAVE')",
                     ]
                 ),
             )

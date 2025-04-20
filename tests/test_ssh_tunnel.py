@@ -16,7 +16,7 @@ def mock_ssh_tunnel_forwarder() -> MagicMock:
         SSHTunnelForwarder, local_bind_ports=[1111], autospec=True
     )
     with patch(
-        "pgcli.main.sshtunnel.SSHTunnelForwarder",
+        "sqail.main.sshtunnel.SSHTunnelForwarder",
         return_value=mock_ssh_tunnel_forwarder,
     ) as mock:
         yield mock

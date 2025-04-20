@@ -269,8 +269,8 @@ test_ids = [
 def pset_pager_mocks():
     cli = PGCli()
     cli.watch_command = None
-    with mock.patch("pgcli.main.click.echo") as mock_echo, mock.patch(
-        "pgcli.main.click.echo_via_pager"
+    with mock.patch("sqail.main.click.echo") as mock_echo, mock.patch(
+        "sqail.main.click.echo_via_pager"
     ) as mock_echo_via_pager, mock.patch.object(cli, "prompt_app") as mock_app:
         yield cli, mock_echo, mock_echo_via_pager, mock_app
 
@@ -428,7 +428,7 @@ def test_watch_works(executor):
         :param expected_timing: value `time.sleep` expected to be called with on every invocation
         """
         with mock.patch.object(cli, "echo_via_pager") as mock_echo, mock.patch(
-            "pgcli.main.sleep"
+            "sqail.main.sleep"
         ) as mock_sleep:
             mock_sleep.side_effect = [None] * (target_call_count - 1) + [
                 KeyboardInterrupt
@@ -443,7 +443,7 @@ def test_watch_works(executor):
             assert expected_output in mock_echo.call_args_list[i][0][0]
 
     # With no history, it errors.
-    with mock.patch("pgcli.main.click.secho") as mock_secho:
+    with mock.patch("sqail.main.click.secho") as mock_secho:
         cli.handle_watch_command(r"\watch 2")
     mock_secho.assert_called()
     assert (
@@ -622,7 +622,7 @@ def test_duration_in_words(duration_in_seconds, words):
 def test_notifications(executor):
     run(executor, "listen chan1")
 
-    with mock.patch("pgcli.main.click.secho") as mock_secho:
+    with mock.patch("sqail.main.click.secho") as mock_secho:
         run(executor, "notify chan1, 'testing1'")
         mock_secho.assert_called()
         arg = mock_secho.call_args_list[0].args[0]
@@ -633,6 +633,6 @@ def test_notifications(executor):
 
     run(executor, "unlisten chan1")
 
-    with mock.patch("pgcli.main.click.secho") as mock_secho:
+    with mock.patch("sqail.main.click.secho") as mock_secho:
         run(executor, "notify chan1, 'testing2'")
         mock_secho.assert_not_called()
