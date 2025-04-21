@@ -31,11 +31,11 @@ jobs:
                         pyproject.toml
                         requirements-dev.txt
 
-#            -   run: psql -d postgres -c "create role postgres with password 'postgres'"
+            -   run: psql -d postgres -c "create role sqail with password 'sqail';"
 
-            -   run: psql -d postgres -c "alter role postgres with login"
+            -   run: psql -d postgres -c "alter role sqail with login createdb;"
 
-            -   run: psql -d postgres -c "create database _test_db owner postgres;"
+            -   run: psql -d postgres -c "create database _test_db owner sqail;"
 
             -   name: Install project and development dependencies
                 run: |
