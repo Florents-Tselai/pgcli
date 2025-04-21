@@ -3,10 +3,10 @@ import psycopg
 from sqail.main import format_output, OutputSettings
 from os import getenv
 
-POSTGRES_USER = getenv("PGUSER", "postgres")
+POSTGRES_USER = getenv("PGUSER", "sqail")
 POSTGRES_HOST = getenv("PGHOST", "localhost")
 POSTGRES_PORT = getenv("PGPORT", 5432)
-POSTGRES_PASSWORD = getenv("PGPASSWORD", "postgres")
+POSTGRES_PASSWORD = getenv("PGPASSWORD", "sqail")
 
 
 def db_connection(dbname=None):
