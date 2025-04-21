@@ -31,6 +31,12 @@ jobs:
                         pyproject.toml
                         requirements-dev.txt
 
+            -   run: psql -d postgres -c "create role postgres with password 'postgres'"
+
+            -   run: psql -d postgres -c "alter role postgres with login"
+
+            -   run: psql -d postgres -c "create database _test_db owner postgres;"
+
             -   name: Install project and development dependencies
                 run: |
                     pip install -e '.[test]'
